@@ -1,0 +1,29 @@
+.squid-game {
+  display: flex;
+  background: #000;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+/**
+*** General styles for desktop devices
+***/
+
+@media (min-width: 1025px) {
+  .squid-game {
+    height: 100vh;
+    min-height: 600px;
+  }
+}
+
+/**
+*** Styles for extra large desktop devices
+***/
+
+@media (min-width: 2450px) {
+  .squid-game {
+    justify-content: center;
+  }
+} 
+

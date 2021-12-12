@@ -1,0 +1,58 @@
+.modal-wrapper {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 45vh;
+  bottom: calc(45vh + 60px);
+  left: 35vw;
+  right: 35vw;
+}
+
+.modal {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.75em;
+  font-weight: 300;
+  font-style: italic;
+  border-radius: 10px;
+  width: 20vw;
+  min-width: 300px;
+  height: 8vh;
+  min-height: 80px;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.animation {
+  opacity: 0;
+  animation: fadeIn 0.7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+/**
+*** Styles for mobile devices in portrait mode
+***/
+@media screen and (max-width: 599px) and (orientation: portrait) {
+  .modal {
+    font-size: 1.6em;
+    min-width: 165px;
+    min-height: 60px;
+  }
+}
+
+/**
+*** Styles for mobile devices in landscape mode
+***/
+@media screen and (max-width: 855px) and (orientation: landscape) {
+  .modal {
+    font-size: 1.8em;
+    min-width: 165px;
+    min-height: 60px;
+  }
+}

@@ -1,0 +1,226 @@
+.guessing-square-area {
+  width: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes falling-bottom {
+  from {transform: rotateX(0deg);}
+  to {transform: rotateX(90deg);}
+}
+
+@keyframes falling-top {
+  from {transform: rotateX(0deg);}
+  to {transform: rotateX(-90deg);}
+}
+
+.falling-animation {
+  transform: rotateX(0deg);
+}
+
+.bottom {
+  transform-origin: center top;
+  animation: falling-bottom 0.6s ease-in 0.4s 1 forwards;
+}
+
+.top {
+  transform-origin: center bottom;
+  animation: falling-top 0.6s ease-in 0.4s 1 forwards;
+}
+
+.guessing-square-support {
+  flex: 1 0 auto;
+  background: #8d8d8d;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  width: 5vh;
+}
+
+.guessing-square {
+  width: 20vh;
+  height: 20vh;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.guessing-square.disable-cursor {
+  cursor: default;
+}
+
+.order-first {
+  order: -1;
+}
+
+.occupied {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background: #ffdddd;
+}
+
+.unknown {
+  background: #ffdddd;
+  color: red;
+  font-size: 6em;
+  font-weight: 800;
+}
+
+.incorrect {
+  background: red;
+  cursor: default;
+  font-size: 6em;
+  font-weight: 800;
+}
+
+.tile {
+  color: red;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  cursor: default;
+  border: 1px dotted lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interactive:hover {
+  cursor: pointer;
+  background: #ffaaaa;
+}
+
+.tile.selected {
+  background: #ffff65;
+}
+
+/**
+*** General styles for devices in portrait mode
+***/
+@media screen and (orientation: portrait) {
+  .guessing-square-area {
+    width: unset;
+    flex-direction: row;
+  }
+
+  .guessing-square-support {
+    border: none;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    height: 5vw;
+  }
+
+  @keyframes falling-right {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(-90deg);}
+  }
+
+  @keyframes falling-left {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(90deg);}
+  }
+
+  .falling-animation {
+    transform: rotateY(0deg);
+  }
+
+  .bottom {
+    transform-origin: center left;
+    animation: falling-right 0.6s ease-in 0.4s 1 forwards;
+  }
+
+  .top {
+    transform-origin: center right;
+    animation: falling-left 0.6s ease-in 0.4s 1 forwards;
+  }
+}
+
+/**
+*** Styles for mobile devices in portrait mode
+***/
+@media screen and (max-width: 599px) and (orientation: portrait) {
+  .tile {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 349px) and (orientation: portrait) {
+  .tile {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 599px) and (orientation: portrait) {
+  .guessing-square-area {
+    height: 32vw;
+  }
+
+  .guessing-square {
+    width: 26vw;
+    height: 26vw;
+  }
+
+  .unknown, .incorrect {
+    font-size: 5em;
+  }
+}
+
+/**
+*** Styles for mobile devices in landscape mode
+***/
+@media screen and (max-width: 599px) and (orientation: landscape) {
+  .unknown, .incorrect {
+    font-size: 3.75em;
+  }
+
+  .tile {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 855px) and (orientation: landscape) {
+  .unknown, .incorrect {
+    font-size: 4.5em;
+  }
+
+  .tile {
+    font-size: 1.15em;
+  }
+}
+
+/**
+*** Styles for Tablet devices in portrait mode
+***/
+
+@media screen and (min-width: 600px) and (orientation: portrait) {
+  .guessing-square-area {
+    height: 27vw;
+  }
+
+  .guessing-square {
+    width: 22vw;
+    height: 22vw;
+  }
+}
+
+/**
+*** General styles for desktop devices
+***/
+
+@media (min-width: 1025px) {
+  .guessing-square-area {
+    min-width: 180px;
+  }
+
+  .guessing-square {
+    min-height: 120px;
+    min-width: 120px;
+  }
+
+  .guessing-square-support {
+    min-width: 30px;
+  }
+}

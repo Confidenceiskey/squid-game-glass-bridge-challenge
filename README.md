@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+### [Squid Game: Glass Bridge Challenge Browser Game](https://davidpnowak.com/p/squid-game-glass-bridge-challenge/)
+
+_A fun little web browser game that lets you play the glass bridge challenge from Squid Game. Can you make it to the finish platform before time runs out?_
+
+#### Project Guidelines
+
+My aim for this project was to recreate the Glass Bridge Challenge from Squid Game in as little time as possible. I wanted to turn that challenge into a fun, little web browser game. I came up with the full design, which was based on MrBeast's Squid Game recreation, myself. 
+
+Note: Good coding practices were not always followed in this project as I went for speed... and not coding perfection!
+
+#### Project Approach
+
+I decided to keep the code very basic and simple. I didn't want to get caught up in best practices or over engineering this small game. I wanted to get a good working version shipped in as short amount of time as possible.
+
+I started by getting some inspiration from MrBeast's Squid Game YouTube video and made some hand drawn pencil sketches in a notebook. Afterwards, I coded up the UI/CSS of the desktop version first. Once that was complete, I started implementing the JavaScript code logic to make the game work and needed to refactor the data structure a couple times to make my life a bit easier. At the end I made sure that the game was fully responsive by adjusting the CSS for both tablet and mobile devices.
+
+#### Made with
+- HTML, CSS, JavaScript & React 
+
+#### Icons by [Flaticon](https://www.flaticon.com)
+
+- **Question Mark:** Made by [Freepik](https://www.flaticon.com/authors/freepik)
+
+#### Watch
+
+Check out this time lapse video I made showing how I built the UI/CSS for this glass bridge game!
+
+[![Squid Game: Glass Bridge Challenge Web Browser Game](https://confidenceiskey.github.io/codepenimg/squid-game-glass-bridge-game.png)](https://youtu.be/elugaR4pkn8 "Squid Game: Glass Bridge Challenge Web Browser Game")
+
+#### Preview
+
+Want to play the game? Check out the live version of my [Squid Game: Glass Bridge Challenge Web Browser Game](https://davidpnowak.com/p/squid-game-glass-bridge-challenge/).
+
+![Screenshot of my Glass Bridge Challenge web game built in React](https://confidenceiskey.github.io/codepenimg/glass-bridge-challenge.png "Screenshot of my Glass Bridge Challenge web game from Squid Game")
+
+##
+
+#### Disclaimer
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,135 @@
+.timer-container {
+  width: 70px;
+  height: 95px;
+  background: #f7ff63;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid #818100;
+  border-bottom: 2px solid #818100;
+}
+
+.countdown-timer {
+  flex: 1;
+  font-size: 2.6em;
+  font-weight: 600;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.button {
+  margin-bottom: 3px;
+  cursor: pointer;
+  height: 20px;
+  width: 100%;
+  font-weight: 800;
+  background: white;
+}
+
+.disabled {
+  cursor: default;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-text {
+  font-weight: normal;
+  font-style: italic;
+  cursor: default;
+  text-align: left;
+  padding: 5px 8px;
+  border: 1px solid #000;
+}
+
+.tooltip-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.text {
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 150px;
+  background-color: papayawhip;
+  color: #000;
+  border-radius: 6px;
+  position: absolute;
+  top: -5px;
+  right: 121%;
+  transition: opacity 0.7s;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 100%;
+  margin-top: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent papayawhip;
+}
+.tooltip:hover .tooltip-text, .button.tooltip .show-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.button.tooltip .hide-tooltip {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/**
+*** Styles for Tablet devices in portrait mode
+***/
+
+@media screen and (min-width: 600px) and (orientation: portrait) {
+  .timer-container {
+    width: 180px;
+    height: 80px;
+    flex-direction: row-reverse;
+  }
+
+  .countdown-timer {
+    flex: unset;
+    min-width: 60px;
+    text-align: center;
+    padding-right: 10px;
+    font-size: 3em;
+  }
+
+  .button {
+    height: unset;
+    width: 85%;
+    font-size: 1.4em;
+  }
+
+  .tooltip .tooltip-text {
+    width: 300px;
+  }
+
+  .tooltip-text {
+    padding: 10px 16px;
+  }
+
+  .text {
+    padding-top: 8px;
+  }
+}

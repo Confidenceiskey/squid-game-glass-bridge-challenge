@@ -1,0 +1,48 @@
+.platform-tile {
+  color: #000;
+  font-size: 3em;
+  height: 20%;
+  width: 50%;
+  box-sizing: border-box;
+  border: 1px dotted #8d8d8d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interactable:hover {
+  cursor: pointer;
+  background: #ffffdd;
+}
+
+.platform-tile.selected {
+  background: #ffff65;
+}
+
+/**
+*** General styles for devices in portrait mode
+***/
+@media screen and (orientation: portrait) {
+  .platform-tile {
+    height: 50%;
+    width: 20%;
+  }
+}
+
+/**
+*** Styles for mobile devices in portrait mode
+***/
+@media screen and (max-width: 599px) and (orientation: portrait) {
+  .platform-tile {
+    font-size: 2em;
+  }
+}
+
+/**
+*** Styles for mobile devices in landscape mode
+***/
+@media screen and (max-width: 855px) and (orientation: landscape) {
+  .platform-tile {
+    font-size: 1.8em;
+  }
+}

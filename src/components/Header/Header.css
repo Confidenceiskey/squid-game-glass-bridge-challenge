@@ -1,0 +1,86 @@
+.header {
+  text-align: center;
+  background: #000;
+  color: #f1f1f1;
+  position: fixed;
+  padding: 5px 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.title {
+  font-size: 1.4em;
+}
+
+.subtitle {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.author {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+.link {
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/**
+  * Styles for mobile devices
+  **/
+@media screen and (max-width: 599px) and (orientation: portrait) {
+  .header {
+    right: 75px;
+  }
+
+  .title {
+    font-size: 1.2em;
+  }
+
+  .subtitle {
+    font-size: 0.85em;
+  }
+
+  .author {
+    font-size: 0.7em;
+  }
+}
+
+/**
+*** Styles for smaller Tablet devices in portrait mode
+***/
+
+@media screen and (min-width: 600px) and (orientation: portrait) {
+  .header {
+    right: 180px;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    font-size: 1.05em;
+  }
+
+  .author {
+    font-size: 0.85em;
+  }
+}
+
+/**
+*** Styles for larger Tablet devices in portrait mode
+***/
+
+@media screen and (min-width: 900px) and (orientation: portrait) {
+  .header {
+    right: 0;
+  }
+}

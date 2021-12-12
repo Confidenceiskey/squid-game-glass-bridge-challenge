@@ -1,0 +1,191 @@
+.game-board-wrapper {
+  flex: 1 0 auto;
+  padding: 70px 20px 80px;
+  background: #0a0a0a;
+  color: #fff;
+  display: grid;
+  grid-template-areas: 
+    "platform-start platform-support-start   guessing-squares-top  platform-support-end platform-end"
+    "platform-start platform-support-start        center-beam      platform-support-end platform-end"
+    "platform-start platform-support-start guessing-squares-bottom platform-support-end platform-end";
+  grid-template-columns: 15vw 3vw 1fr 3vw 15vw;
+  grid-template-rows: 1fr 4vh 1fr;
+  align-items: center;
+}
+
+.locked {
+  opacity: 0.3;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+  height: 50vh;
+}
+
+.platform-start {
+  grid-area: platform-start;
+  flex-wrap: wrap-reverse;
+}
+
+.platform-support-start {
+  grid-area: platform-support-start;
+  background: #8d8d8d;
+  height: 35vh;
+}
+
+.guessing-squares-container {
+  display: flex;
+  height: 27vh;
+}
+
+.container-left-top {
+  align-self: end;
+}
+
+.container-bottom-right {
+  align-self: start;
+}
+
+.center-beam {
+  grid-area: center-beam;
+  height: 4vh;
+  width: auto;
+  background: #8d8d8d;
+}
+
+.platform-support-end {
+  grid-area: platform-support-end;
+  background: #8d8d8d;
+  height: 35vh;
+}
+
+.platform-end {
+  grid-area: platform-end;
+  flex-wrap: wrap;
+}
+
+/**
+*** General styles for devices in portrait mode
+***/
+@media screen and (orientation: portrait) {
+  .game-board-wrapper {
+    grid-template-areas: 
+    "platform-end                platform-end            platform-end"
+    "platform-support-end    platform-support-end    platform-support-end"
+    "guessing-squares-top         center-beam      guessing-squares-bottom"
+    "platform-support-start platform-support-start  platform-support-start"
+    "platform-start             platform-start           platform-start";
+    grid-template-columns: 1fr 5vw 1fr;
+    grid-template-rows: 15vh 3vh 1fr 3vh 15vh;
+    justify-items: center;
+    align-items: unset;
+  }
+
+  .platform {
+    flex-direction: row;
+    height: auto;
+    width: 75vw;
+  }
+
+  .platform-start {
+    flex-wrap: wrap;
+  }
+
+  .platform-support-start, .platform-support-end {
+    height: auto;
+    width: 55vw;
+  }
+
+  .guessing-squares-container {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .container-left-top {
+    align-self: unset;
+    justify-self: end;
+  }
+
+  .container-bottom-right {
+    align-self: unset;
+    justify-self: start;
+  }
+
+  .center-beam {
+    height: 100%;
+    width: 100%;
+  }
+
+  .platform-end {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+/**
+*** Styles for mobile devices in portrait mode
+***/
+@media screen and (max-width: 599px) and (orientation: portrait) {
+  .game-board-wrapper {
+    padding-top: 120px;
+  }
+
+  .guessing-squares-container {
+    width: 37vw;
+  }
+
+}
+
+/**
+*** Styles for tablet devices in portrait mode
+***/
+@media screen and (min-width: 600px) and (orientation: portrait) {
+  .game-board-wrapper {
+    padding: 105px 20px;
+  }
+
+  .guessing-squares-container {
+    width: 32vw;
+  }
+}
+
+/**
+*** General styles for desktop devices
+***/
+
+@media (min-width: 1025px) {
+  .platform {
+    min-height: 300px;
+  }
+
+  .platform-support-start, .platform-support-end {
+    min-height: 210px;
+  }
+
+  .guessing-squares-container {
+    min-height: 162px;
+  }
+
+  .center-beam {
+    min-height: 24px;
+  }
+}
+
+/**
+*** Styles for extra large desktop devices
+***/
+
+@media (min-width: 1500px) and (max-width: 1999px) {
+  .game-board-wrapper {
+    grid-template-columns: 15vw 45px 1fr 45px 15vw;
+  }
+} 
+
+@media (min-width: 2000px) {
+  .game-board-wrapper {
+    flex: unset;
+    grid-template-columns: 300px 45px 1fr 45px 300px;
+  }
+} 
